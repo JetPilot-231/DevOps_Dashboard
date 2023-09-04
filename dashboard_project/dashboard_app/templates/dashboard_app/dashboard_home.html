@@ -1,0 +1,22 @@
+<!-- dashboard_app/templates/dashboard_app/dashboard_home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the DevOps Dashboard</h1>
+    <h2>Users:</h2>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.username }} - {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Metrics:</h2>
+    <ul>
+        {% for metric in metrics %}
+            <li>{{ metric.name }} - {{ metric.value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
